@@ -1,8 +1,14 @@
-header {
+header, nav, footer {
     text-align: center;
 }
+
 body {
-    front-family: Georgia, serif;
+    font-family: Georgia, serif;
     background-color: #222222;
-    color:white;
+    color: white;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
 }
