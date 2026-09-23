@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi sitio web</h1>
+        <h1>Formulario de Inscripción</h1>
     </header>
     <nav>
         <ul>
@@ -21,14 +21,41 @@
         </ul>
     </nav>
 <form action="" method="get">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre">
+    <fieldset>
+        <legend>Datos Personales</legend>
+    <div>
+     <label for="nombre">Nombre:</label>
+     <input type="text" id="nombre" name="nombre">
+     <label for="apellido">Apellido:</label>
+     <input type="text" id="apellido" name="apellido"> 
+    </div> 
     <br>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <br>
-    <br>
+     
+    <div>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono"> 
+    <label for="region">Región:</label> 
+    <select id="region" name="region">
+     <option value="">Seleccione una región</option> 
+     <option value="tarapaca">Tarapacá</option> 
+     <option value="antofagasta">Antofagasta</option> 
+     <option value="atacama">Atacama</option> 
+     <option value="loslagos">Los Lagos</option>
+     </select> 
+     </div> 
+     <br> 
+     <div> 
+    <label for="nacimiento">Fecha de nacimiento:</label> 
+    <input type="date" id="nacimiento" name="nacimiento">
+    </div>    
+    </fieldset>
+   
+    <fieldset>
+        <legend> Información academica</legend>
+
+    </fieldset>
+
+
     <label for="mensaje">mensaje:</label>
     <textarea id="mensaje" name="mensaje"></textarea>
     <button type="submit">Enviar</button>
