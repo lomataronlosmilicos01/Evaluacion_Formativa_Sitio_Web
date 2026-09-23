@@ -26,9 +26,11 @@
     <div>
      <label for="nombre">Nombre:</label>
      <input type="text" id="nombre" name="nombre">
+
      <label for="apellido">Apellido:</label>
      <input type="text" id="apellido" name="apellido"> 
     </div> 
+
     <br>
      
     <div>
@@ -37,7 +39,7 @@
     <label for="region">Región:</label> 
     <select id="region" name="region">
      <option value="">Seleccione una región</option> 
-     <option value="tarapaca">Tarapacá</option> 
+     <option value="metropolitana">Metropolitana</option> 
      <option value="antofagasta">Antofagasta</option> 
      <option value="atacama">Atacama</option> 
      <option value="loslagos">Los Lagos</option>
@@ -52,19 +54,59 @@
    
     <fieldset>
         <legend> Información academica</legend>
+        <div style="display: flex; gap: 100px;">
+        
         <div> 
             <label>Nivel educacional:</label>
             <input type="radio" id="media" name="nivel" value="media">
             <label for="media">Enseñanza media</label>
             <input type="radio" id="tecnico" name="nivel" value="tecnico">
             <label for="tecnico">Técnico</label>
-            
-        </div>
+            <input type="radio" id="universitario" name="nivel" value="universitario"> 
+            <label for="universitario">Universitario</label>
+            <label for="otro"> otro</label>
 
+            <br><br>
+
+            <label for="carrera">Carrera de interés:</label> 
+            <select id="carrera" name="carrera">
+                <option value="">Seleccione una carrera</option>
+                <option value="informatica">Ingeniería en Informática</option>
+                <option value="tec.informatica">Técnico en Informática</option> 
+            </select>
+        </div>
+    </div>
     </fieldset>
 
-
+    <fieldset>
+        <legend> Áreas de interés </legend>
+          <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Salud
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+  <label class="form-check-label" for="flexCheckChecked">
+    Tecnología
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Educación
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Administración
+  </label>
+</div>
+    </fieldset>
     <label for="mensaje">mensaje:</label>
     <textarea id="mensaje" name="mensaje"></textarea>
     <button type="submit">Enviar</button>
+    
 </form>
