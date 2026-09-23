@@ -53,30 +53,45 @@
     </fieldset>
    
     <fieldset>
-        <legend> Información academica</legend>
-        <div style="display: flex; gap: 100px;">
-        
-        <div> 
-            <label>Nivel educacional:</label>
-            <input type="radio" id="media" name="nivel" value="media">
-            <label for="media">Enseñanza media</label>
-            <input type="radio" id="tecnico" name="nivel" value="tecnico">
-            <label for="tecnico">Técnico</label>
-            <input type="radio" id="universitario" name="nivel" value="universitario"> 
-            <label for="universitario">Universitario</label>
-            <label for="otro"> otro</label>
+    <legend>Información académica</legend>
 
-            <br><br>
+<div style="display: flex; gap: 100px;">
 
-            <label for="carrera">Carrera de interés:</label> 
-            <select id="carrera" name="carrera">
-                <option value="">Seleccione una carrera</option>
-                <option value="informatica">Ingeniería en Informática</option>
-                <option value="tec.informatica">Técnico en Informática</option> 
-            </select>
-        </div>
+    <div>
+        <label>Nivel educacional:</label>
+        <br>
+
+        <input type="radio" id="media" name="nivel" value="media">
+        <label for="media">Enseñanza media</label>
+        <br>
+
+        <input type="radio" id="tecnico" name="nivel" value="tecnico">
+        <label for="tecnico">Técnico</label>
+        <br>
+
+        <input type="radio" id="universitario" name="nivel" value="universitario">
+        <label for="universitario">Universitario</label>
+        <br>
+
+        <input type="radio" id="otro" name="nivel" value="otro">
+        <label for="otro">Otro</label>
     </div>
-    </fieldset>
+
+    <div>
+        <label for="carrera">Carrera de interés:</label>
+        <br>
+
+        <select id="carrera" name="carrera">
+            <option value="">Seleccione una carrera</option>
+            <option value="informatica">Ingeniería en Informática</option>
+            <option value="tec.informatica">Técnico en Informática</option>
+        </select>
+    </div>
+
+</div>
+
+
+</fieldset>
 
     <fieldset>
         <legend> Áreas de interés </legend>
@@ -105,8 +120,11 @@
   </label>
 </div>
     </fieldset>
+
+    <fieldset> 
+        <legend> Mensaje u Observaciones</legend>
     <label for="mensaje">mensaje:</label>
     <textarea id="mensaje" name="mensaje"></textarea>
     <button type="submit">Enviar</button>
-    
+    </fieldset>
 </form>

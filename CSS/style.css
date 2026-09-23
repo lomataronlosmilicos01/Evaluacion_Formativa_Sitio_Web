@@ -12,3 +12,13 @@ li {
     display: inline-block;
     margin-right: 20px;
 }
+fieldset {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid white;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
