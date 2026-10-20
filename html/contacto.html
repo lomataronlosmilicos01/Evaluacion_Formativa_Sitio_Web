@@ -40,29 +40,32 @@
 
     <br>
      
-    <div>
+    
+<div>
     <label for="telefono">Teléfono:</label>
-    <input type="tel" id="telefono" name="telefono"> 
-      required pattern="[0-9 +()-]{8,15}">
-<small id="errorTelefono" class="text-danger"></small>
+    <input type="tel" id="telefono" name="telefono"
+           required pattern="[0-9 +()-]{8,15}">
+    <small id="errorTelefono" class="text-danger"></small>
 
-    <label for="region">Región:</label> 
-    <select id="region" name="region">
-     <option value="">Seleccione una región</option> 
-     <option value="metropolitana">Metropolitana</option> 
-     <option value="antofagasta">Antofagasta</option> 
-     <option value="atacama">Atacama</option> 
-     <option value="loslagos">Los Lagos</option>
-     </select> 
-     <small id="errorRegion" class="text-danger"></small>
-     </div> 
-     <br> 
-     <div> 
+    <label for="region">Región:</label>
+    <select id="region" name="region" required>
+        <option value="">Seleccione una región</option>
+        <option value="metropolitana">Metropolitana</option>
+        <option value="antofagasta">Antofagasta</option>
+        <option value="atacama">Atacama</option>
+        <option value="loslagos">Los Lagos</option>
+    </select>
+    <small id="errorRegion" class="text-danger"></small>
+</div>
 
-    <label for="nacimiento">Fecha de nacimiento:</label> 
-    <input type="date" id="nacimiento" name="nacimiento">
+<br>
+
+<div>
+    <label for="nacimiento">Fecha de nacimiento:</label>
+    <input type="date" id="nacimiento" name="nacimiento" required>
     <small id="errorNacimiento" class="text-danger"></small>
-    </div>    
+</div>
+   
     </fieldset>
    
     <fieldset>
