@@ -140,12 +140,15 @@
     <small id="errorAreas" class="text-danger"></small>
 </fieldset>
 
-    <fieldset> 
-        <legend> Mensaje u Observaciones</legend>
-    <label for="mensaje">mensaje:</label>
-    <textarea id="mensaje" name="mensaje"></textarea>
-    <button type="submit">Enviar</button>
-    </fieldset>
+<fieldset>
+    <legend>Mensaje u Observaciones</legend>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje"
+              rows="4" minlength="10" maxlength="500" required></textarea>
+
+    <small id="errorMensaje" class="text-danger"></small>
+</fieldset>
 
 <br>
 
