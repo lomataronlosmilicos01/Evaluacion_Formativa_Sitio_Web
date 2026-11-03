@@ -8,11 +8,11 @@
         tareas.push(document.getElementById("tarea").value);
         localStorage.setItem("tareas", JSON.stringify(tareas));
         document.getElementById("tarea").value = "";
-        mostrarTareas();
+        mostrar();
     }
     function mostrar() {
         let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
-        documnt.getElementById("lista").innerHTML = tareas.map(t => `<li>${t}</li>`).join("");
+        documnt.getElementById("lista").innerHTML = tareas.map(t => `<li>${t}</li>`);
     }
     mostrar();
         
