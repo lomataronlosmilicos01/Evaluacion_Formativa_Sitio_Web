@@ -1,0 +1,22 @@
+<input id="tarea" placeholder="Escribe una tarea">
+<button onclick="guardar()"></button>
+<ul id="lista"></ul>
+
+<script>
+    function guardar(){
+        let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
+        tareas.push(document.getElementById("tarea").value);
+        localStorage.setItem("tareas", JSON.stringify(tareas));
+        document.getElementById("tarea").value = "";
+        mostrarTareas();
+    }
+    function mostrar() {
+        let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
+        documnt.getElementById("lista").innerHTML = tareas.map(t => `<li>${t}</li>`).join("");
+    }
+    mostrar();
+        
+
+
+</script>
+
