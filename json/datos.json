@@ -2,6 +2,12 @@
  {"nombre": "Sam Jiménez", "edad": 20 },
  {"nombre": "Maximiliano Varas", "edad": 20 },
  {"nombre": "Profe Calfun", "edad": 100},
- {"nombre": "Vicente Loncón", "edad": 21 }
+ {"nombre": "Vicente Loncón", "edad": 21 },
+ {"nombre": "Joaquín Loncón", "edad": 21},
+ {"nombre": "Lucas Gallardo", "edad": 24},
+ {"nombre": "Martin Avilés", "edad": 19},
+ {"nombre": "Nicolas Ruiz", "edad": 22},
+ {"nombre": "Jorgue Perez", "edad": 21},
+ {"nombre": "Yoshua Iriti", "edad": 28}
 ]
 
