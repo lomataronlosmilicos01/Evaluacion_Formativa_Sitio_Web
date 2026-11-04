@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet</title>
+</head>
+<body>
+    <h1>Lista Personas</h1>
+    <ul id="lista"></ul>
+    <script>
+        fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTGnMxmzFCcLuT2Bl3Loq5FyRE64yL1T9NQEwICxbbTfAfUwfk1F_sSI_Cu9eRsZnMMH7dPpR6wgD39/pub?output=csv")
+         .then(res => res.text())
+         .then(csv => {
+            const rows = csv.split("\n");
+            rows.forEach(row => {
+                const [nombre, edad, correo] = row.split(",");
+                const li = document.createElement("li");
+                const li = document.createElement("li");
+                li.textContent = `${nombre} (${edad} años) - ${correo}`;
+            }); 
+              .catch
+    });
+      
+    
+</script>
+</body>
+</html>
