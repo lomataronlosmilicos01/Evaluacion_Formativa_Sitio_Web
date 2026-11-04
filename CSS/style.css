@@ -27,3 +27,22 @@ legend {
    height: 250px;
    object-fit: contain;
 }
+/* estilo para lista del localstorage */
+#lista {
+    list-style: none;
+    padding: 0;
+    max-width: 450px;
+    margin: 30px 0;
+}
+
+#lista li {
+    display: block;
+    background-color: #292929;
+    color: white;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 20px;
+}
