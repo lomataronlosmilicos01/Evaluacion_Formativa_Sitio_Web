@@ -27,7 +27,7 @@ legend {
    height: 250px;
    object-fit: contain;
 }
-/* estilo para lista del localstorage */
+/* estilo para lista json y localstorage */
 #lista {
     list-style: none;
     padding: 0;
