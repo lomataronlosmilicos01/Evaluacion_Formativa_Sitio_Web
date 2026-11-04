@@ -14,7 +14,8 @@
         fetch("../json/datos.json")
          .then(res => res.json())
          .then(personas =>{
-       let html = personas.map(p => `<li>${p.nombre} (${p.edad} años) - ${p.correo}</li>`).join("");
+       let viejos = personas.filter(p => p.edad > 25);
+       let html = viejos.map(p => `<li>${p.nombre} (${p.edad} años) - ${p.correo}</li>`).join("");
        document.getElementById("lista").innerHTML = html;
     });
 </script>
