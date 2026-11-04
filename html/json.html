@@ -1,8 +1,19 @@
-<ul id="lista"></ul>
-<script>
-    fetch("datos.json")
-     .then(res => res.json())
-     .then(personas =>{
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Datos</title>
+</head>
+
+<body>
+    <h1>Lista de datos</h1>
+    <ul id="lista"></ul>
+    <script>
+        fetch("../json/datos.json")
+         .then(res => res.json())
+         .then(personas =>{
        let html = personas.map(p => `<li>${p.nombre} (${p.edad} años)</li>`).join("");
        document.getElementById("lista").innerHTML = html;
     });

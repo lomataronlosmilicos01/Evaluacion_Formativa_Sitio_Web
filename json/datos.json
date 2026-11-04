@@ -1,7 +1,7 @@
 [
-
+ {"nombre": "Sam Jiménez", "edad": 20 },
+ {"nombre": "Maximiliano Varas", "edad": 20 },
+ {"nombre": "Profe Calfun", "edad": 100},
+ {"nombre": "Vicente Loncón", "edad": 21 }
 ]
-{"nombre": "Juan Pérez", "edad": 30 },
-{"nombre": "María López", "edad": 25 },
-{"nombre": "Carlos García", "edad": 40},
-{"nombre": "Ana Torres", "edad": 28 },
+
