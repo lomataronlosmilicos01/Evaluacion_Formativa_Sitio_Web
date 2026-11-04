@@ -1,5 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tareas</title>
+</head>
+<body>
+
 <input id="tarea" placeholder="Escribe una tarea">
-<button onclick="guardar()"></button>
+<button onclick="guardar()">Guardar</button>
 <ul id="lista"></ul>
 
 <script>
@@ -12,7 +21,7 @@
     }
     function mostrar() {
         let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
-        documnt.getElementById("lista").innerHTML = tareas.map(t => `<li>${t}</li>`);
+        document.getElementById("lista").innerHTML = tareas.map(t => `<li>${t}</li>`);
     }
     mostrar();
         
