@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,23 +7,48 @@
     <title>Google Sheet</title>
 </head>
 <body>
-    <h1>Lista Personas</h1>
+
+    <h1>Lista de Personas</h1>
+
     <ul id="lista"></ul>
+
     <script>
         fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTGnMxmzFCcLuT2Bl3Loq5FyRE64yL1T9NQEwICxbbTfAfUwfk1F_sSI_Cu9eRsZnMMH7dPpR6wgD39/pub?output=csv")
-         .then(res => res.text())
-         .then(csv => {
-            const rows = csv.split("\n");
-            rows.forEach(row => {
+
+        .then(res => {
+            if (!res.ok) {
+                throw new Error("Error al obtener los datos");
+            }
+            return res.text();
+        })
+
+        .then(csv => {
+
+            const rows = csv.trim().split(/\r?\n/);
+
+            const lista = document.getElementById("lista");
+
+            rows.slice(1).forEach(row => {
+
                 const [nombre, edad, correo] = row.split(",");
+
                 const li = document.createElement("li");
-                const li = document.createElement("li");
+
                 li.textContent = `${nombre} (${edad} años) - ${correo}`;
-            }); 
-              .catch
-    });
-      
-    
-</script>
+
+                lista.appendChild(li);
+
+            });
+
+        })
+
+        .catch(error => {
+            console.error("Error:", error);
+            document.getElementById("lista").textContent =
+                "No se pudieron cargar los datos.";
+        });
+
+    </script>
+
 </body>
 </html>
