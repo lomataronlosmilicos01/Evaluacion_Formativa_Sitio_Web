@@ -24,6 +24,7 @@
     <h1>Mis Tareas</h1>
 <input id="tarea" placeholder="Escribe una tarea">
 <button onclick="guardar()">Guardar</button>
+<button onclick="borrarTodas()">Borrar todas las tareas</button>
 <ul id="lista"></ul>
 
 <script>
@@ -34,11 +35,16 @@
         document.getElementById("tarea").value = "";
         mostrar();
     }
-    function mostrar() {
+    function mostrar()
+  {
         let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
         document.getElementById("lista").innerHTML = tareas.map(t => `<li>${t}</li>`).join("");
     }
     mostrar();
+      function borrarTodas() {
+    localStorage.removeItem("tareas");
+    mostrar();
+} 
         
 
 
